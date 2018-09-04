@@ -34,9 +34,9 @@ def dijkstra(graph,start,goal):
             break
     path.insert(0,start)
     if shortest_distance[goal] != infinity:
-        print('Shortest distance is ' + str(shortest_distance[goal]))
-        print('And the path is ' + str(path))
+        print('Jarak jalur = ' + str(shortest_distance[goal]) + "KM")
+        print('Jalur yang dituju ' + str(path))
  
-start = input("Masukan start with '' = ")
-finish = input("Masukan Tujuan with ''= ")
+start = input("Masukan start dengan '' = ")
+finish = input("Masukan Tujuan dengan ''= ")
 dijkstra(graph, start, finish)
