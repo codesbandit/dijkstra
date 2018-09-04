@@ -37,5 +37,6 @@ def dijkstra(graph,start,goal):
         print('Shortest distance is ' + str(shortest_distance[goal]))
         print('And the path is ' + str(path))
  
- 
-dijkstra(graph, 'a', 'd')
+start = input("Masukan start with '' = ")
+finish = input("Masukan Tujuan with ''= ")
+dijkstra(graph, start, finish)
