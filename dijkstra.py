@@ -1,4 +1,4 @@
-graph = {'a':{'e':6,'d':8},'b':{'c':4,'d':3},'c':{'b':4,'d':4,'e':2},'d':{'b':3,'c':4},'e':{'c':2}}
+graph = {'a':{'e':6,'d':8},'b':{'c':4,'d':3},'c':{'b':4,'d':4,'e':2},'d':{'b':3,'c':4},'e':{'c':2,'a':6}}
  
 def dijkstra(graph,start,goal):
     shortest_distance = {}
