@@ -4,44 +4,44 @@ graph = {'a':{'e':6,'d':8},
          'd':{'b':3,'c':4},
          'e':{'c':2,'a':6}}
  
-def dijkstra(graph,start,goal):
-    shortest_distance = {}
-    predecessor = {}
-    unseenNodes = graph
+def dijkstra(graph,mulai,tujuan):
+    jalur_cepat = {}
+    penghubung = {}
+    titik_tdk_terlihat = graph
     infinity = 9999999
-    path = []
-    for node in unseenNodes:
-        shortest_distance[node] = infinity
-    shortest_distance[start] = 0
+    jalur = []
+    for titik in titik_tdk_terlihat:
+        jalur_cepat[titik] = infinity
+    jalur_cepat[mulai] = 0
  
-    while unseenNodes:
-        minNode = None
-        for node in unseenNodes:
-            if minNode is None:
-                minNode = node
-            elif shortest_distance[node] < shortest_distance[minNode]:
-                minNode = node
+    while titik_tdk_terlihat:
+        minTitik = None
+        for titik in titik_tdk_terlihat:
+            if minTitik is None:
+                minTitik = titik
+            elif jalur_cepat[titik] < jalur_cepat[minTitik]:
+                minTitik = titik
  
-        for childNode, weight in graph[minNode].items():
-            if weight + shortest_distance[minNode] < shortest_distance[childNode]:
-                shortest_distance[childNode] = weight + shortest_distance[minNode]
-                predecessor[childNode] = minNode
-        unseenNodes.pop(minNode)
+        for titikAnak, bobot in graph[minTitik].items():
+            if bobot + jalur_cepat[minTitik] < jalur_cepat[titikAnak]:
+                jalur_cepat[titikAnak] = bobot + jalur_cepat[minTitik]
+                penghubung[titikAnak] = minTitik
+        titik_tdk_terlihat.pop(minTitik)
  
-    currentNode = goal
-    while currentNode != start:
+    titikSebelumnya = tujuan
+    while titikSebelumnya != mulai:
         try:
-            path.insert(0,currentNode)
-            currentNode = predecessor[currentNode]
+            jalur.insert(0,titikSebelumnya)
+            titikSebelumnya = penghubung[titikSebelumnya]
         except KeyError:
             print('Jalur tidak ditemukan')
             break
-    path.insert(0,start)
-    if shortest_distance[goal] != infinity:
-        print('Jarak jalur = ' + str(shortest_distance[goal]) + "KM")
-        print('Jalur yang dituju ' + str(path))
+    jalur.insert(0,mulai)
+    if jalur_cepat[tujuan] != infinity:
+        print('Jarak jalur = ' + str(jalur_cepat[tujuan]) + "KM")
+        print('Jalur yang dituju ' + str(jalur))
  
-startw = raw_input("Masukan start = ")
+start = raw_input("Masukan start = ")
 finish = raw_input("Masukan Tujuan = ")
 
-dijkstra(graph, startw, finish)
+dijkstra(graph, start, finish)
