@@ -10,7 +10,7 @@ graph adalah var untuk mengambar graph / rute(Kamu bisa ganti graph dengan yang 
 
 ![alt text](https://preview.ibb.co/i2S1Nz/Drawing.png)
 
-Kamu bisa compile langsung codenya : ![Dinisi](http://tpcg.io/4HnLtQ)
+Kamu bisa compile langsung codenya : (http://tpcg.io/4HnLtQ)
 
 =================================================================================
 
@@ -24,4 +24,4 @@ graph is a variable for designing graph / rute (You can change to your own graph
 
 ![alt text](https://preview.ibb.co/i2S1Nz/Drawing.png)
 
-Kamu bisa compile langsung codenya : ![Dinisi](http://tpcg.io/4HnLtQ)
+Kamu bisa compile langsung codenya : (http://tpcg.io/4HnLtQ)
