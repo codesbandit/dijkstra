@@ -1,4 +1,8 @@
-graph = {'a':{'e':6,'d':8},'b':{'c':4,'d':3},'c':{'b':4,'d':4,'e':2},'d':{'b':3,'c':4},'e':{'c':2,'a':6}}
+graph = {'a':{'e':6,'d':8},
+         'b':{'c':4,'d':3},
+         'c':{'b':4,'d':4,'e':2},
+         'd':{'b':3,'c':4},
+         'e':{'c':2,'a':6}}
  
 def dijkstra(graph,start,goal):
     shortest_distance = {}
@@ -30,13 +34,14 @@ def dijkstra(graph,start,goal):
             path.insert(0,currentNode)
             currentNode = predecessor[currentNode]
         except KeyError:
-            print('Path not reachable')
+            print('Jalur tidak ditemukan')
             break
     path.insert(0,start)
     if shortest_distance[goal] != infinity:
         print('Jarak jalur = ' + str(shortest_distance[goal]) + "KM")
         print('Jalur yang dituju ' + str(path))
  
-start = input("Masukan start dengan '' = ")
-finish = input("Masukan Tujuan dengan ''= ")
-dijkstra(graph, start, finish)
+startw = raw_input("Masukan start = ")
+finish = raw_input("Masukan Tujuan = ")
+
+dijkstra(graph, startw, finish)
