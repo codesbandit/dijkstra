@@ -1,8 +1,8 @@
 
 from graphviz import Graph
 
-f = Graph('finite_state_machine', filename='graphImage/dijikstra')
-f.attr(rankdir='LR', size='8,5')
+f = Graph(filename='output/dijikstra')
+f.attr(rankdir='LR', size='4')
 
 #f.attr('node', shape='doublecircle')
 #f.node('LR_0')
@@ -15,13 +15,13 @@ f.edge('A', 'E', label='6')
 f.edge('A', 'D', label='8')
 f.edge('C', 'B', label='4')
 f.edge('C', 'D', label='4')
-f.edge('C', 'E', label='2')
+#f.edge('C', 'E', label='2')
 f.edge('D', 'B', label='3')
-f.edge('D', 'C', label='4')
+#f.edge('D', 'C', label='4')
 f.edge('E', 'C', label='2')
-f.edge('E', 'A', label='6')
-f.edge('B', 'C', label='4')
-f.edge('B', 'D', label='3')
+#f.edge('E', 'A', label='6')
+#f.edge('B', 'C', label='4')
+#f.edge('B', 'D', label='3')
 
 
 f.view()
