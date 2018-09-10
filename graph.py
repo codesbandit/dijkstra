@@ -1,7 +1,7 @@
 
-from graphviz import Digraph
+from graphviz import Graph
 
-f = Digraph('finite_state_machine', filename='dijikstra.gv')
+f = Graph('finite_state_machine', filename='graphImage/dijikstra')
 f.attr(rankdir='LR', size='8,5')
 
 #f.attr('node', shape='doublecircle')
